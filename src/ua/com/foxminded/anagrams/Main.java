@@ -1,4 +1,4 @@
-package com.foxminded.okon.task1;
+package ua.com.foxminded.anagrams;
 
 
 public class Main {

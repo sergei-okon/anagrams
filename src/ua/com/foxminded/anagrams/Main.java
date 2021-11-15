@@ -1,10 +1,15 @@
 package ua.com.foxminded.anagrams;
 
 
+import java.util.Arrays;
+
 public class Main {
+
     public static void main(String[] args) {
-        String sentence = String.join("", args);
         Anagram anagram = new Anagram();
-        anagram.createAnagramFromSentence(sentence);
+        String createdAnagram = anagram.createAnagram(args);
+
+        System.out.println(" " + Arrays.toString(args) + " =>" + " " + createdAnagram);
     }
 }
+

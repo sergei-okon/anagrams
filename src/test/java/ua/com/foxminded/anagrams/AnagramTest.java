@@ -3,7 +3,8 @@ package ua.com.foxminded.anagrams;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class AnagramTest {
     Anagram anagram;
@@ -48,31 +49,31 @@ class AnagramTest {
     }
 
     @Test
-    void createAnagram_Success_whenInputLettersAndSymbols() {
+    void createAnagram_shouldSuccess_whenInputLettersAndSymbols() {
         String[] args = new String[]{"a1bcd efg!h"};
         assertEquals("d1cba hgf!e", anagram.createAnagram(args));
     }
 
     @Test
-    void createAnagram_Success_whenInputLowerAndUpperCaseCharacters() {
+    void createAnagram_shouldSuccess_whenInputLowerAndUpperCaseCharacters() {
         String[] args = new String[]{"aaaAAA"};
         assertEquals("AAAaaa", anagram.createAnagram(args));
     }
 
     @Test
-    void createAnagram_Success_whenInputMultipleSameLetter() {
+    void createAnagram_shouldSuccess_whenInputMultipleSameLetter() {
         String[] args = new String[]{"aaa"};
         assertEquals("aaa", anagram.createAnagram(args));
     }
 
     @Test
-    void createAnagram_Success_whenInputOnlySymbols() {
+    void createAnagram_ShouldSuccess_whenInputOnlySymbols() {
         String[] args = new String[]{"!!!12//"};
         assertEquals("!!!12//", anagram.createAnagram(args));
     }
 
     @Test
-    void createAnagram_Success_whenInputSeveralWords() {
+    void createAnagram_shouldSuccess_whenInputSeveralWords() {
         String[] args = new String[]{"olleH dlrow"};
         assertEquals("Hello world", anagram.createAnagram(args));
     }

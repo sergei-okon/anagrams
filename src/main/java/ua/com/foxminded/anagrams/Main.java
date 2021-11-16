@@ -1,6 +1,5 @@
 package ua.com.foxminded.anagrams;
 
-
 import java.util.Arrays;
 
 public class Main {
